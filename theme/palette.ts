@@ -1,15 +1,33 @@
 export const defaultPalette = {
   primary: {
-    dark: 'rgba(64, 29, 15, 1)',
-    main: 'rgba(89, 43, 24, 1)',
-    light: 'rgba(244, 238, 230, 1)',
+    dark: 'rgba(16, 58, 120, 1)',
+    main: 'rgba(32, 94, 186, 1)',
+    light: 'rgba(227, 237, 252, 1)',
     contrastText: 'rgba(255, 255, 255, 1)',
   },
   secondary: {
     dark: 'rgba(255, 255, 255, 1)',
     main: 'rgba(232, 232, 232, 1)',
     light: 'rgba(168, 168, 168, 1)',
-    contrastText: 'rgba(89, 43, 24, 1)',
+    contrastText: 'rgba(32, 94, 186, 1)',
+  },
+  dilute: {
+    dark: 'rgba(16, 58, 120, 0.2)',
+    main: 'rgba(32, 94, 186, 0.2)',
+    light: 'rgba(227, 237, 252, 0.2)',
+    contrastText: 'rgba(255, 255, 255, 0.2)',
+  },
+  creamy: {
+    dark: '#7d5833',
+    main: '#e39d56',
+    light: '#ede5dd',
+    contrastText: '#57310a',
+  },
+  skysea: {
+    dark: '#1e69d9',
+    main: '#5e81b5',
+    light: '#c2daff',
+    contrastText: '#032354',
   },
   info: {
     dark: 'rgba(23, 107, 173, 1)',

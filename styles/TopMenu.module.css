@@ -8,7 +8,7 @@
 }
 
 .menuItem:hover {
-  background-color: #ffd83d !important;
+  background-color: #ffe479 !important;
   transition: 0.8s;
 }
 .menuItem:hover::before {
@@ -16,9 +16,7 @@
 }
 .callToActionButton {
   background-color: #ffd83d;
-  border-radius: 50px;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-radius: 10px;
 }
 .callToActionButton:hover {
   animation: blink 1s infinite;
@@ -28,7 +26,7 @@
     background: #ffd83d;
   }
   50% {
-    background: #e8a9fc;
+    background: #cba8f6;
   }
   100% {
     background: #ffd83d;

@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import Select, { SelectChangeEvent } from '@mui/material/Select'
-import { MenuItem } from '@mui/material'
+import { MenuItem, Typography } from '@mui/material'
 import { useRouter } from 'next/router'
+import { useTheme } from '@mui/material'
 type Props = {}
 
 export const SelectLanguage = (props: Props) => {
+  const theme = useTheme()
   const [language, setLanguage] = useState<string>('th')
   const router = useRouter()
   useEffect(() => {
@@ -33,6 +35,11 @@ export const SelectLanguage = (props: Props) => {
       onChange={handleChange}
       IconComponent={() => null}
       inputProps={{ sx: { paddingRight: '16px !important' } }}
+      renderValue={(value) => (
+        <Typography variant="h8" color={theme.palette.textBlack.dark}>
+          {value.toUpperCase()}
+        </Typography>
+      )}
       sx={[
         { '&::before': { borderBottom: 'none', position: 'fixed' } },
         { '&::after': { borderBottom: 'none' } },
@@ -40,8 +47,16 @@ export const SelectLanguage = (props: Props) => {
         { background: 'rgba(235, 224, 213,.5)', padding: '6px 0px 6px 12px', borderRadius: '50px' },
       ]}
     >
-      <MenuItem value="th">TH</MenuItem>
-      <MenuItem value="en">EN</MenuItem>
+      <MenuItem value="th">
+        <Typography variant="h8" color="primary">
+          TH
+        </Typography>
+      </MenuItem>
+      <MenuItem value="en">
+        <Typography variant="h8" color="primary">
+          EN
+        </Typography>
+      </MenuItem>
     </Select>
   )
 }

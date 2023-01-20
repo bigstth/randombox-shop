@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Button, AppBar, Container, Grid, Typography } from '@mui/material'
+import { Button, AppBar, Container, Grid, Typography, useTheme } from '@mui/material'
 import styles from '@/styles/TopMenu.module.css'
 import styled from '@emotion/styled'
 import logo from '@/public/images/logo.png'
@@ -9,15 +9,18 @@ import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
 import { width, display, justify, align } from '@/common/utils/styles'
 import { CustomDrawer, CustomMenuBar, SelectLanguage } from '@/modules/layouts/default-layout/'
-const AppBarStyle = styled(AppBar)`
-  height: 90px;
-  margin-bottom: 16px;
-`
 
 type Props = { t: any; i18n: any }
 
 export default function TopMenu({ t, i18n }: Props) {
+  const theme = useTheme()
   const [drawerOpen, setDrawerOpen] = useState<boolean>(false)
+
+  const AppBarStyle = styled(AppBar)`
+    height: 90px;
+    margin-bottom: 16px;
+    background: ${theme.palette.skysea.main};
+  `
 
   const handleDrawerOpen = () => {
     setDrawerOpen(true)
@@ -44,7 +47,9 @@ export default function TopMenu({ t, i18n }: Props) {
           </Grid>
           <Grid item lg={2} display={{ xs: 'none', sm: 'none', md: 'flex', lg: 'flex' }} sx={{ ...justify['end'], ...align['center'] }}>
             <Button color="secondary" variant="contained" href="/create-shop" component={Link} className={styles.callToActionButton}>
-              <Typography variant="h8">{t('menu.createShop')}</Typography>
+              <Typography color={theme.palette.text.primary} variant="h8">
+                {t('menu.createShop')}
+              </Typography>
             </Button>
           </Grid>
           <Grid item xs={1} sm={1} display={{ xs: 'flex', sm: 'flex', md: 'flex', lg: 'none' }} sx={{ ...justify['end'], ...align['center'] }}>

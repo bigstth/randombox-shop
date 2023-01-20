@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { MENU } from '@/common/layouts/menu'
 import styles from '@/styles/TopMenu.module.css'
 import { useTranslation } from 'next-i18next'
+import { useTheme } from '@mui/material'
 
 type Props = {
   drawerOpen: boolean
@@ -15,7 +16,7 @@ type Props = {
 
 export const CustomDrawer = ({ drawerOpen, handleDrawerOpen, handleDrawerClose }: Props) => {
   const { t } = useTranslation('common')
-
+  const theme = useTheme()
   return (
     <Drawer
       anchor="right"
@@ -23,22 +24,22 @@ export const CustomDrawer = ({ drawerOpen, handleDrawerOpen, handleDrawerClose }
       onClose={handleDrawerClose}
       PaperProps={{
         sx: {
-          background: '#ede5dd',
+          background: theme.palette.creamy.light,
         },
       }}
     >
       <Grid container sx={{ width: '75vw' }}>
-        <Grid item sx={{ ...width[100], borderBottom: '2px dashed rgba(89, 43, 24, 0.2)', ...display['flex'], ...justify['end'] }}>
+        <Grid item sx={{ ...width[100], borderBottom: `2px dashed ${theme.palette.dilute.main}`, ...display['flex'], ...justify['end'] }}>
           <CloseIcon fontSize="large" onClick={handleDrawerClose} sx={{ cursor: 'pointer' }} />
         </Grid>
         {MENU(t).map((menu) => (
-          <Grid item sx={{ ...width[100], borderBottom: '2px dashed rgba(89, 43, 24, 0.2)', ...display['flex'], ...justify['center'] }} key={menu.name}>
+          <Grid item sx={{ ...width[100], borderBottom: `2px dashed ${theme.palette.dilute.main}`, ...display['flex'], ...justify['center'] }} key={menu.name}>
             <Button color="primary" variant="contained" href={menu.url} component={Link} sx={{ ...width[75], m: 2 }}>
               {menu.name}
             </Button>
           </Grid>
         ))}
-        <Grid item sx={{ ...width[100], borderBottom: '2px dashed rgba(89, 43, 24, 0.2)', ...display['flex'], ...justify['center'] }}>
+        <Grid item sx={{ ...width[100], ...display['flex'], ...justify['center'] }}>
           <Button color="secondary" variant="contained" href="/create-shop" component={Link} className={styles.callToActionButton} sx={{ ...width[75], m: 2 }}>
             <Typography variant="h8">{t('menu.createShop')}</Typography>
           </Button>
