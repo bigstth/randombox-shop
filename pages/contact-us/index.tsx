@@ -1,5 +1,8 @@
+import React from 'react'
 import DefaultLayout from '@/common/layouts/DefaultLayout'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+
+type Props = { t: any }
 export async function getStaticProps({ locale }: any) {
   return {
     props: {
@@ -7,6 +10,6 @@ export async function getStaticProps({ locale }: any) {
     },
   }
 }
-export default function Home() {
-  return <DefaultLayout>home</DefaultLayout>
+export default function index({ t }: Props) {
+  return <DefaultLayout>contact</DefaultLayout>
 }

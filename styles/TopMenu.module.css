@@ -1,0 +1,36 @@
+.menuItem + .menuItem::before {
+  content: '|';
+  padding: 0px;
+  font-size: 17px;
+  color: #ebe0d5;
+  display: flex;
+  align-items: center;
+}
+
+.menuItem:hover {
+  background-color: #ffd83d !important;
+  transition: 0.8s;
+}
+.menuItem:hover::before {
+  content: '';
+}
+.callToActionButton {
+  background-color: #ffd83d;
+  border-radius: 50px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+.callToActionButton:hover {
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  0% {
+    background: #ffd83d;
+  }
+  50% {
+    background: #ff6259;
+  }
+  100% {
+    background: #ffd83d;
+  }
+}
