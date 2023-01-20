@@ -11,7 +11,7 @@ const App = ({ Component, pageProps }: AppProps) => {
     <>
       <ThemeProvider theme={theme}>
         <Head>
-          <title>Create your Random Boxs</title>
+          <title>Create Online Shop and Random Boxs</title>
           <meta name="description" content="create random box for open and receieve items!" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />

@@ -18,6 +18,7 @@
     "paths": {
       "@/common/component/*": ["common/component/*"],
       "@/common/layouts/*": ["common/layouts/*"],
+      "@/common/utils/*": ["common/utils/*"],
       "@/modules/*": ["modules/*"],
       "@/public/*": ["public/*"],
       "@/styles/*": ["styles/*"],
