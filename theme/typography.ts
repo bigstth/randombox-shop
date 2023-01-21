@@ -36,14 +36,14 @@ export const defaultTypography: TypographyOptions | ((palette: Palette) => Typog
   },
   h5: {
     fontSize: '20px',
-    fontWeight: 700,
+    fontWeight: 400,
     letterSpacing: '0.15px',
     lineHeight: '34px',
     fontFamily: `'Mali','Kanit','Roboto'`,
   },
   h6: {
     fontSize: '20px',
-    fontWeight: 500,
+    fontWeight: 700,
     letterSpacing: '0.15px',
     lineHeight: '34px',
     fontFamily: `'Mali','Kanit','Roboto'`,

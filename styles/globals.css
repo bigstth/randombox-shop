@@ -16,6 +16,18 @@
   font-weight: 400;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Sriracha';
+  src: url('../fonts/Sriracha-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Itim';
+  src: url('../fonts/Itim-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
 * {
   box-sizing: border-box;
   padding: 0;

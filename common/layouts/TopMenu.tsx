@@ -18,7 +18,7 @@ export default function TopMenu({ t, i18n }: Props) {
 
   const AppBarStyle = styled(AppBar)`
     height: 90px;
-    margin-bottom: 16px;
+    margin-bottom: 50px;
     background: ${theme.palette.skysea.main};
   `
 

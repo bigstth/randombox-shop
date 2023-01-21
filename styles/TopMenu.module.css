@@ -2,7 +2,7 @@
   content: '|';
   padding: 0px;
   font-size: 17px;
-  color: #ebe0d5;
+  color: #d5daeb;
   display: flex;
   align-items: center;
 }
@@ -10,9 +10,11 @@
 .menuItem:hover {
   background-color: #ffe479 !important;
   transition: 0.8s;
+  border-radius: 50px;
 }
 .menuItem:hover::before {
   content: '';
+  padding-left: 4px;
 }
 .callToActionButton {
   background-color: #ffd83d;
@@ -26,7 +28,7 @@
     background: #ffd83d;
   }
   50% {
-    background: #cba8f6;
+    background: #fff;
   }
   100% {
     background: #ffd83d;

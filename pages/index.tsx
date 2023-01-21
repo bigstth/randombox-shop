@@ -1,5 +1,7 @@
+import React from 'react'
 import DefaultLayout from '@/common/layouts/DefaultLayout'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { Header } from '@/modules/home'
 export async function getStaticProps({ locale }: any) {
   return {
     props: {
@@ -8,5 +10,9 @@ export async function getStaticProps({ locale }: any) {
   }
 }
 export default function Home() {
-  return <DefaultLayout>home</DefaultLayout>
+  return (
+    <DefaultLayout>
+      <Header />
+    </DefaultLayout>
+  )
 }

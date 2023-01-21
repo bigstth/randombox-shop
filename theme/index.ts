@@ -7,6 +7,13 @@ interface ITextPalette {
   light?: string
   disable?: string
 }
+interface ITypography {
+  fontSize?: string
+  fontWeight?: number
+  letterSpacing?: string
+  lineHeight?: string
+  fontFamily?: string
+}
 
 interface IIconPalette {
   hover: string

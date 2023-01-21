@@ -19,7 +19,7 @@ export const defaultPalette = {
   },
   creamy: {
     dark: '#7d5833',
-    main: '#e39d56',
+    main: '#d9ba9c',
     light: '#ede5dd',
     contrastText: '#57310a',
   },
