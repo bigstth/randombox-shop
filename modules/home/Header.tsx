@@ -1,13 +1,13 @@
-import React, { useState, useMemo } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
+import { useTranslation } from 'next-i18next'
 import { Grid, MobileStepper, Button } from '@mui/material'
 import { display, align, justify, width } from '@/common/utils/styles'
 import { HeaderTypography, DescriptionTypography } from './styles'
-import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft'
-import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight'
 import { useTheme } from '@mui/material/styles'
 import { HEADER_INFO, ANIMATION_STYLE } from './constant'
-import { useTranslation } from 'next-i18next'
+import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft'
+import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight'
 type Props = {}
 
 export const Header = (props: Props) => {
@@ -22,6 +22,20 @@ export const Header = (props: Props) => {
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1)
   }
+
+  useEffect(() => {
+    const timeCount = setInterval(() => {
+      setActiveStep((prevActiveStep) => {
+        if (prevActiveStep === 2) {
+          return 0
+        }
+        return prevActiveStep + 1
+      })
+    }, 15000)
+    return () => {
+      clearInterval(timeCount)
+    }
+  }, [])
 
   const HeaderTextRender = (currentStep: number) => {
     return (
@@ -58,15 +72,15 @@ export const Header = (props: Props) => {
               activeStep={activeStep}
               sx={{ maxWidth: 400, background: theme.palette.creamy.main, borderRadius: '20px' }}
               nextButton={
-                <Button size="small" onClick={handleNext} disabled={activeStep === 5}>
-                  Next
+                <Button size="small" onClick={handleNext} disabled={activeStep === 2}>
+                  {t('general.next')}
                   {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
                 </Button>
               }
               backButton={
                 <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
                   {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-                  Back
+                  {t('general.back')}
                 </Button>
               }
               className="animate__animated animate__fadeIn animate__slow animate__delay-2s"

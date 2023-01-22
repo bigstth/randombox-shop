@@ -1,4 +1,6 @@
 import DogWow from '@/public/images/header/dog-wow.png'
+import DogPresent from '@/public/images/header/dog-present.png'
+import DogShop from '@/public/images/header/dogtheme.png'
 export const HEADER_INFO = (currentStep: number, t: any) => {
   const headers = [
     {
@@ -10,13 +12,13 @@ export const HEADER_INFO = (currentStep: number, t: any) => {
     {
       title: t('header.secondHeader.title'),
       description: t('header.secondHeader.description', { returnObjects: true }),
-      image: DogWow,
+      image: DogPresent,
       alt: t('header.secondHeader.imageAlt'),
     },
     {
       title: t('header.thirdHeader.title'),
       description: t('header.thirdHeader.description', { returnObjects: true }),
-      image: DogWow,
+      image: DogShop,
       alt: t('header.thirdHeader.imageAlt'),
     },
   ]

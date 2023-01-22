@@ -34,7 +34,7 @@ export const SelectLanguage = (props: Props) => {
       variant="standard"
       onChange={handleChange}
       IconComponent={() => null}
-      inputProps={{ sx: { paddingRight: '16px !important' } }}
+      inputProps={{ sx: { paddingRight: '12px !important' } }}
       renderValue={(value) => (
         <Typography variant="h8" color={theme.palette.textBlack.dark}>
           {value.toUpperCase()}
@@ -44,7 +44,7 @@ export const SelectLanguage = (props: Props) => {
         { '&::before': { borderBottom: 'none', position: 'fixed' } },
         { '&::after': { borderBottom: 'none' } },
         { '&:hover': { border: 'none' } },
-        { background: 'rgba(235, 224, 213,.5)', padding: '6px 0px 6px 12px', borderRadius: '50px' },
+        { background: 'rgba(235, 224, 213,.5)', padding: '6px 0px 6px 12px', borderRadius: '50px', marginRight: '8px' },
       ]}
     >
       <MenuItem value="th">

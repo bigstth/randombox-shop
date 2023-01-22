@@ -12,7 +12,7 @@ export const CustomMenuBar = (props: Props) => {
   const theme = useTheme()
   const { t } = useTranslation('common')
   return (
-    <MenuBar>
+    <MenuBar style={{ minWidth: '620px' }}>
       {MENU(t).map((menu) => (
         <MenuBarItem className={styles.menuItem} key={menu.name}>
           <Button color="primary" href={menu.url} component={Link} sx={width[100]}>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { CustomDrawer, CustomMenuBar, SelectLanguage, AvatarProfile } from '@/modules/layouts/default-layout/'
 import { Button, AppBar, Container, Grid, Typography, useTheme } from '@mui/material'
 import styles from '@/styles/TopMenu.module.css'
 import styled from '@emotion/styled'
@@ -8,7 +9,6 @@ import logo from '@/public/images/logo.png'
 import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
 import { width, display, justify, align } from '@/common/utils/styles'
-import { CustomDrawer, CustomMenuBar, SelectLanguage } from '@/modules/layouts/default-layout/'
 
 type Props = { t: any; i18n: any }
 
@@ -36,17 +36,18 @@ export default function TopMenu({ t, i18n }: Props) {
         <Grid container spacing={1} sx={width[100]}>
           <Grid item xs={5} sm={7} lg={2}>
             <Link href={'/'}>
-              <Image src={logo} alt="logo" width="180" height="60" />
+              <Image src={logo} alt="logo" width="180" height="60" className="animate__animated animate__pulse animate__slow " />
             </Link>
           </Grid>
-          <Grid item xs={0} lg={7} sx={align['center']} display={{ xs: 'none', sm: 'none', md: 'none', lg: 'flex' }}>
+          <Grid item xs={0} lg sx={align['center']} display={{ xs: 'none', sm: 'none', md: 'none', lg: 'flex' }}>
             <CustomMenuBar />
           </Grid>
-          <Grid item xs sm={1} lg={1} sx={{ ...display['flex'], ...justify['end'], ...align['center'] }}>
+          <Grid item xs sx={{ ...display['flex'], ...justify['end'], ...align['center'] }}>
             <SelectLanguage />
+            <AvatarProfile />
           </Grid>
           <Grid item lg={2} display={{ xs: 'none', sm: 'none', md: 'flex', lg: 'flex' }} sx={{ ...justify['end'], ...align['center'] }}>
-            <Button color="secondary" variant="contained" href="/create-shop" component={Link} className={styles.callToActionButton}>
+            <Button color="secondary" variant="contained" href="/create-shop" component={Link} className={`${styles.callToActionButton} animate__animated animate__pulse animate__fast animate__delay-5s animate__repeat-3`}>
               <Typography color={theme.palette.text.primary} variant="h8">
                 {t('menu.createShop')}
               </Typography>

@@ -10,18 +10,24 @@
   "header": {
     "firstHeader": {
       "title": "Increase orders and sales !!",
-      "description": ["สะดวกสบายด้วยระบบจัดการสินค้า และคำสั่งซื้อ", "ร้านค้าหน้าตาน่ารัก เรียบง่าย เป็นมิตรกับทุกคน"],
-      "imageAlt": "เปิดร้านค้าออนไลน์ เพิ่มยอดขาย"
+      "description": ["Makes you comfortable with the product and order management system.", "Your shop will look cute, simple, and friendly to everyone."],
+      "imageAlt": "create shopping website"
     },
     "secondHeader": {
       "title": "Random Box System (Gachapon)!!",
-      "description": ["รวมสินค้าต่างๆใส่กล่องสุ่ม และให้ลูกค้าสุ่มผ่านเว็บร้านค้าได้เลย", "ช่วยเพิ่มยอดขาย และให้ความรู้สึกตื่นเต้น"],
-      "imageAlt": "สร้างกล่องสุ่ม"
+      "description": ["Combine products into a random box. And let customers enjoy unboxing.", "Help you increases sales and give a feeling of excitement to customers"],
+      "imageAlt": "create random box gachapon"
     },
     "thirdHeader": {
-      "title": "เพิ่มยอดขาย ด้วยหน้าร้านออนไลน์",
-      "description": ["สะดวกสบายด้วยระบบจัดการสินค้า และคำสั่งซื้อ", "ร้านค้าหน้าตาน่ารัก เรียบง่าย เป็นมิตรกับทุกคน"],
-      "imageAlt": "เปิดร้านค้าออนไลน์ เพิ่มยอดขาย"
+      "title": "Super Cute themes are available to change",
+      "description": ["Makeup your shop style by selecting the theme ", " Add decorations to your shop to make it cuter."],
+      "imageAlt": "create shopping website and theme"
     }
+  },
+  "general": {
+    "next": "Next",
+    "back": "Back",
+    "signIn": "Login",
+    "title": "WoofyGoofy | Create Online Shopping Website"
   }
 }

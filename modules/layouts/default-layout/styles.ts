@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import { AppBar } from '@mui/material'
+import { Typography } from '@mui/material'
 
 export const AppBarStyle = styled(AppBar)`
   height: 90px;
@@ -18,4 +19,23 @@ export const MenuBarItem = styled.li`
   display: flex;
   justify-content: center;
   align-item: center;
+`
+
+export const ProfileBox = styled.div`
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  background: rgba(235, 224, 213, 0.5);
+  cursor: pointer;
+`
+
+export const LoginText = styled(Typography)`
+  position: absolute;
+  color: black;
+  background: #fff;
+  border-radius: 50px;
+  padding: 0px 6px;
+  line-height: 16px;
 `
